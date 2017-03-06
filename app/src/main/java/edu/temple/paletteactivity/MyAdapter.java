@@ -7,26 +7,27 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 public class MyAdapter extends BaseAdapter {
 
-    ArrayList<String> myColors;
+    //ArrayList<String> myColors;
     Context context;
+    private String[] colors;
+    private String[] actualColors;
 
-    public MyAdapter(Context context, ArrayList colors){
+    public MyAdapter(Context context, String[] colors, String[] actualColors ){
         this.context = context;
-        this.myColors = colors;
+        this.colors = colors;
+        this.actualColors = actualColors;
     }
 
     @Override
     public int getCount() {
-        return myColors.size();
+        return colors.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return myColors.get(position);
+        return colors[position];
     }
 
     @Override
@@ -39,9 +40,9 @@ public class MyAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         TextView textView = new TextView(context);
-        textView.setText(myColors.get(position));
-        textView.setTextSize(35);
-        textView.setBackgroundColor(Color.parseColor(myColors.get(position)));
+        textView.setText(this.colors[position]);
+        //textView.setTextSize(35);
+        textView.setBackgroundColor(Color.parseColor(actualColors[position]));
 
         return textView;
 
