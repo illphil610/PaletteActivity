@@ -2,6 +2,7 @@ package edu.temple.paletteactivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -42,8 +43,12 @@ public class PaletteActivity extends Activity {
         myColors.add("Magenta");
         myColors.add("Black");
 
+        Resources res = getResources();
+        final String[] colors = res.getStringArray(R.array.color_array);
+        final String[] actualColors = res.getStringArray(R.array.actual_color_array);
 
-        myAdapter= new MyAdapter(this, myColors);
+
+        myAdapter= new MyAdapter(PaletteActivity.this, colors, actualColors);
 
         myList = (GridView) findViewById(listView);
 
@@ -55,9 +60,9 @@ public class PaletteActivity extends Activity {
 
                 Intent newActivityIntent = new Intent(PaletteActivity.this, CanvasActivity.class);
 
-                String colorSelection = myColors.get(position);
+                //String colorSelection = myColors.get(position);
 
-                newActivityIntent.putExtra(message, colorSelection);
+                newActivityIntent.putExtra(message, actualColors[position]);
 
                 startActivity(newActivityIntent);
             }
