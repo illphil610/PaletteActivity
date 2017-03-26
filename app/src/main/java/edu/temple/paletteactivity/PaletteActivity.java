@@ -27,6 +27,5 @@ public class PaletteActivity extends Activity implements PalletteFragment.Pallet
     public void changeCanvasColor(String color){
         canvasFragment.changeBackgroundColor(color);
     }
-
 }
 

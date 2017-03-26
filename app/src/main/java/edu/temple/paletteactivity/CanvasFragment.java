@@ -34,6 +34,5 @@ public class CanvasFragment extends Fragment {
 
     public void changeBackgroundColor(String color) {
         canvasFrame.setBackgroundColor(Color.parseColor(color));
-        //Toast.makeText(getContext(), "color", Toast.LENGTH_SHORT).show();
     }
 }
