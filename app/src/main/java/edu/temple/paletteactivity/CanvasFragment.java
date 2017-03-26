@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 
 /**
@@ -29,7 +28,7 @@ public class CanvasFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_canvas, container, false);
 
-        frameLayout = (FrameLayout) view.findViewById(R.id.canvas_fragment);
+        //frameLayout = (FrameLayout) view.findViewById(R.id.canvas_fragment);
         canvasFrame = (FrameLayout) view.findViewById(R.id.canvas_frame);
 
         return view;
@@ -37,7 +36,7 @@ public class CanvasFragment extends Fragment {
 
     public void changeBackgroundColor(String color) {
         canvasFrame.setBackgroundColor(Color.parseColor(color));
-        Toast.makeText(getContext(), "color", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(), "color", Toast.LENGTH_SHORT).show();
 
     }
 }
