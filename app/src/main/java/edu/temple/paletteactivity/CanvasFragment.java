@@ -2,6 +2,7 @@ package edu.temple.paletteactivity;
 
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 public class CanvasFragment extends Fragment {
 
     FrameLayout frameLayout;
+    FrameLayout canvasFrame;
 
     public CanvasFragment() {
         // Required empty public constructor
@@ -28,12 +30,13 @@ public class CanvasFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_canvas, container, false);
 
         frameLayout = (FrameLayout) view.findViewById(R.id.canvas_fragment);
+        canvasFrame = (FrameLayout) view.findViewById(R.id.canvas_frame);
 
         return view;
     }
 
     public void changeBackgroundColor(String color) {
-        //frameLayout.setBackgroundColor(Color.parseColor(color));
+        canvasFrame.setBackgroundColor(Color.parseColor(color));
         Toast.makeText(getContext(), "color", Toast.LENGTH_SHORT).show();
 
     }

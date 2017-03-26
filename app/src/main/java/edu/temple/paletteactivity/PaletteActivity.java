@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 
-//import static edu.temple.paletteactivity.R.id.listView;
-
 public class PaletteActivity extends Activity implements PalletteFragment.PalletteInterface {
 
     CanvasFragment canvasFragment;

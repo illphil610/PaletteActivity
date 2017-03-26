@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,13 +27,14 @@ public class PalletteFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pallette, container, false);
+        gridView = (GridView) view.findViewById(R.id.grid_view);
+        parentInt = (PalletteInterface) getContext();
 
         //Used for the spanish translation part of the app
         Resources res = getResources();
         final String[] colors = res.getStringArray(R.array.color_array);
         final String[] actualColors = res.getStringArray(R.array.actual_color_array);
 
-        gridView = (GridView) view.findViewById(R.id.grid_view);
 
         final MyAdapter myAdapter = new MyAdapter(getActivity(), colors, actualColors);
 
@@ -43,10 +45,8 @@ public class PalletteFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 String color = actualColors[position];
-                //Toast.makeText(getContext(), color, Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(getContext(), color, Toast.LENGTH_SHORT).show();
                 parentInt.changeCanvasColor(color);
-
 
             }
         };
@@ -55,6 +55,7 @@ public class PalletteFragment extends Fragment {
 
         return view;
     }
+
 
     public interface PalletteInterface{
         void changeCanvasColor(String color);
