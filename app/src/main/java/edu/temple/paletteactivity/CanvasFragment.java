@@ -1,6 +1,5 @@
 package edu.temple.paletteactivity;
 
-
 import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -8,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,6 +35,5 @@ public class CanvasFragment extends Fragment {
     public void changeBackgroundColor(String color) {
         canvasFrame.setBackgroundColor(Color.parseColor(color));
         //Toast.makeText(getContext(), "color", Toast.LENGTH_SHORT).show();
-
     }
 }

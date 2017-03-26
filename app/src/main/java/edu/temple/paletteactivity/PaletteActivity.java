@@ -17,7 +17,6 @@ public class PaletteActivity extends Activity implements PalletteFragment.Pallet
 
         addFragment(new PalletteFragment(), R.id.palette_fragment);
         addFragment(canvasFragment, R.id.canvas_fragment);
-
     }
 
     private void addFragment(Fragment fragment, int containerId) {

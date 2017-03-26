@@ -2,6 +2,7 @@ package edu.temple.paletteactivity;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -41,6 +42,13 @@ public class MyAdapter extends BaseAdapter {
 
         TextView textView = new TextView(context);
         textView.setText(this.colors[position]);
+        textView.setGravity(Gravity.CENTER);
+        textView.setTextColor(context.getResources().getColor(R.color.black));
+
+        if(this.colors[position].equals("Black")){
+            textView.setTextColor(context.getResources().getColor(R.color.white));
+        }
+
         textView.setTextSize(35);
         textView.setBackgroundColor(Color.parseColor(actualColors[position]));
 

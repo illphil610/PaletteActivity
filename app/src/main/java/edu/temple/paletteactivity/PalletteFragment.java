@@ -35,7 +35,6 @@ public class PalletteFragment extends Fragment {
         final String[] colors = res.getStringArray(R.array.color_array);
         final String[] actualColors = res.getStringArray(R.array.actual_color_array);
 
-
         final MyAdapter myAdapter = new MyAdapter(getActivity(), colors, actualColors);
 
         gridView.setAdapter(myAdapter);
@@ -47,7 +46,6 @@ public class PalletteFragment extends Fragment {
                 String color = actualColors[position];
                 Toast.makeText(getContext(), color, Toast.LENGTH_SHORT).show();
                 parentInt.changeCanvasColor(color);
-
             }
         };
 
