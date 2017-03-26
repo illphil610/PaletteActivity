@@ -2,17 +2,35 @@
 <resources>
     <string name="app_name">Pallete Activity</string>
     <string-array name="color_array">
-        <item>Rojo</item>
-        <item>Amarillo</item>
-        <item>Verde</item>
+        <item>Blanco</item>
         <item>Azul</item>
+        <item>Verde</item>
+        <item>Acentuna</item>
+        <item>Rojo</item>
+        <item>Granate</item>
+        <item>amarillo</item>
+        <item>Purpura</item>
+        <item>Cianico</item>
+        <item>Gris</item>
+        <item>GrisOscuro</item>
+        <item>Plata</item>
         <item>Magenta</item>
+        <item>Negro</item>
     </string-array>
     <string-array name="actual_color_array">
-        <item>Red</item>
-        <item>Yellow</item>
-        <item>Green</item>
+        <item>White</item>
         <item>Blue</item>
+        <item>Green</item>
+        <item>Olive</item>
+        <item>Red</item>
+        <item>Maroon</item>
+        <item>Yellow</item>
+        <item>Purple</item>
+        <item>Cyan</item>
+        <item>Gray</item>
+        <item>DarkGray</item>
+        <item>Silver</item>
         <item>Magenta</item>
+        <item>Black</item>
     </string-array>
 </resources>
