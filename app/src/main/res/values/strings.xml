@@ -16,6 +16,7 @@
         <item>Magenta</item>
         <item>Black</item>
     </string-array>
+
     <string-array name="actual_color_array">
         <item>White</item>
         <item>Blue</item>

@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 public class MyAdapter extends BaseAdapter {
 
-    //ArrayList<String> myColors;
     Context context;
     private String[] colors;
     private String[] actualColors;

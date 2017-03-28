@@ -13,7 +13,7 @@ import android.widget.FrameLayout;
  */
 public class CanvasFragment extends Fragment {
 
-    FrameLayout frameLayout;
+    //FrameLayout frameLayout;
     FrameLayout canvasFrame;
 
     public CanvasFragment() {

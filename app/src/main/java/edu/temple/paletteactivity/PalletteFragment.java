@@ -1,5 +1,6 @@
 package edu.temple.paletteactivity;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -52,6 +53,18 @@ public class PalletteFragment extends Fragment {
 
         return view;
     }
+
+    @Override
+    public void onAttach(Activity activity){
+        super.onAttach(activity);
+
+        if(activity instanceof PalletteInterface){
+            parentInt = (PalletteInterface) activity;
+        } else{
+            throw new RuntimeException("Not Implemented");
+        }
+    }
+
 
     public interface PalletteInterface{
         void changeCanvasColor(String color);
