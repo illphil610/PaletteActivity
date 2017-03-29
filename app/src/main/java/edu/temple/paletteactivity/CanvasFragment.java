@@ -13,7 +13,6 @@ import android.widget.FrameLayout;
  */
 public class CanvasFragment extends Fragment {
 
-    //FrameLayout frameLayout;
     FrameLayout canvasFrame;
 
     public CanvasFragment() {
@@ -23,10 +22,8 @@ public class CanvasFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_canvas, container, false);
 
-        //frameLayout = (FrameLayout) view.findViewById(R.id.canvas_fragment);
         canvasFrame = (FrameLayout) view.findViewById(R.id.canvas_frame);
 
         return view;

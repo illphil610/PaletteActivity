@@ -25,8 +25,9 @@ public class PalletteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_pallette, container, false);
+
         gridView = (GridView) view.findViewById(R.id.grid_view);
         parentInt = (PalletteInterface) getContext();
 
@@ -42,9 +43,7 @@ public class PalletteFragment extends Fragment {
         AdapterView.OnItemClickListener listListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
                 String color = actualColors[position];
-                //Toast.makeText(getContext(), color, Toast.LENGTH_SHORT).show();
                 parentInt.changeCanvasColor(color);
             }
         };
@@ -60,14 +59,12 @@ public class PalletteFragment extends Fragment {
 
         if(activity instanceof PalletteInterface){
             parentInt = (PalletteInterface) activity;
-        } else{
+        }else{
             throw new RuntimeException("Not Implemented");
         }
     }
 
-
     public interface PalletteInterface{
         void changeCanvasColor(String color);
     }
-
 }
