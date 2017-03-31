@@ -18,7 +18,7 @@ public class PaletteActivity extends Activity implements PalletteFragment.Pallet
         twoPanes = (findViewById(R.id.canvas_fragment) != null);
 
         canvasFragment = new CanvasFragment();
-        
+
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.palette_fragment, new PalletteFragment());
