@@ -15,7 +15,7 @@ public class MyAdapter extends BaseAdapter {
     private String[] colors;
     private String[] actualColors;
 
-    public MyAdapter(Context context, String[] colors, String[] actualColors ){
+    public MyAdapter(Context context, String[] colors, String[] actualColors ) {
         this.context = context;
         this.colors = colors;
         this.actualColors = actualColors;
@@ -36,7 +36,6 @@ public class MyAdapter extends BaseAdapter {
         return 0;
     }
 
-    //Will create a TextView and set the background color
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -45,7 +44,7 @@ public class MyAdapter extends BaseAdapter {
         textView.setGravity(Gravity.CENTER);
         textView.setTextColor(context.getResources().getColor(R.color.black));
 
-        if(this.colors[position].equals("Black")){
+        if(this.colors[position].equals("Black") || this.colors[position].equals("Negro")) {
             textView.setTextColor(context.getResources().getColor(R.color.white));
         }
 
@@ -54,6 +53,5 @@ public class MyAdapter extends BaseAdapter {
         textView.setBackgroundColor(Color.parseColor(actualColors[position]));
 
         return textView;
-
     }
 }

@@ -54,12 +54,12 @@ public class PalletteFragment extends Fragment {
     }
 
     @Override
-    public void onAttach(Activity activity){
+    public void onAttach(Activity activity) {
         super.onAttach(activity);
 
-        if(activity instanceof PalletteInterface){
+        if(activity instanceof PalletteInterface) {
             parentInt = (PalletteInterface) activity;
-        }else{
+        } else {
             throw new RuntimeException("Not Implemented");
         }
     }
