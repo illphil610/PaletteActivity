@@ -41,9 +41,9 @@ public class PaletteActivity extends Activity implements PalletteFragment.Pallet
         it calls.  If i comment out the canvas.changeBackground.... and allow the doTrans to run then
         it will go to the next activity but that breaks the ability to run this app in landscape mode.
         If i comment out the doTrans, then it works in landscape mode but breaks when running on small devices
-        in portrait mode.  PREEZ HALP! lol
+        in portrait mode.  PREEZ HALP! lol....
         */
-        
+
         doTransition();
         //canvasFragment.changeBackgroundColor(color);
 
